@@ -13,7 +13,12 @@ $(document).ready(function() {
 		},
 		{
 			field: "$score"
-		}]
+		}],
+		render: {
+			item: function(data, escape) {
+				return "<div class = 'tag is-link is-light is-rounded m-1 pt-1'>" + escape(data.text)+ "</div>";
+			}
+		}
 	});
 
 	Shiny.addCustomMessageHandler("load_options", function(message) {
