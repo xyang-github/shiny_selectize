@@ -15,6 +15,10 @@ $(document).ready(function() {
 			field: "$score"
 		}],
 		render: {
+			// option: function(data, escape) {
+			// 	return "<div class = 'is-size-6'>" + escape(data.text) + "</div>";
+
+			// },
 			item: function(data, escape) {
 				return "<div class = 'tag is-link is-light is-rounded m-1 pt-1'>" + escape(data.text)+ "</div>";
 			}

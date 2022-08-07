@@ -14,11 +14,32 @@ ui <- fluidPage(
         # Get stylesheet for selectize js (default above)
         tags$link(rel = "stylesheet",
                   href = "selectize.bootstrap4.css"),
+        tags$link(rel = "stylesheet",
+                  href = "app.css"),
         tags$script(src = "app.js"),
         tags$link(rel = "stylesheet",
                   href = paste0(
                       "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/",
-                      "bulma.min.css"))
+                      "bulma.min.css")),
+        # CSS to override the color settings in the bootstrap file
+        tags$style(
+            HTML(
+                "
+                .form-control.selectize-control .selectize-input.focus {
+                      border-color: red;
+                      box-shadow: 0 0 0 0.2rem red;
+                }
+
+                .form-control.selectize-control .selectize-dropdown .selectize-dropdown-content .option:hover, .form-control.selectize-control .selectize-dropdown .selectize-dropdown-content .option:focus {
+                    background-color: red;
+                }
+
+                .form-control.selectize-control .selectize-dropdown .selectize-dropdown-content .option.active, .form-control.selectize-control .selectize-dropdown .selectize-dropdown-content .option:active {
+                    background-color: red;
+                }
+                "
+            )
+        )
     ),
 
         fluidRow(
