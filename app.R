@@ -2,6 +2,7 @@ library(shiny)
 library(jsonlite)
 
 ui <- fluidPage(
+    class = "container",
     tags$head(
         # Get selectize js dependency
         tags$script(src = paste0(
@@ -26,16 +27,16 @@ ui <- fluidPage(
             HTML(
                 "
                 .form-control.selectize-control .selectize-input.focus {
-                      border-color: red;
-                      box-shadow: 0 0 0 0.2rem red;
+                      border-color: #00008B;
+                      box-shadow: 0 0 0 0.1rem #00008B;
                 }
 
                 .form-control.selectize-control .selectize-dropdown .selectize-dropdown-content .option:hover, .form-control.selectize-control .selectize-dropdown .selectize-dropdown-content .option:focus {
-                    background-color: red;
+                    background-color: #00008B;
                 }
 
                 .form-control.selectize-control .selectize-dropdown .selectize-dropdown-content .option.active, .form-control.selectize-control .selectize-dropdown .selectize-dropdown-content .option:active {
-                    background-color: red;
+                    background-color: #00008B;
                 }
                 "
             )
@@ -43,9 +44,11 @@ ui <- fluidPage(
     ),
 
         fluidRow(
+            class = "m-3",
             tags$h1("Example Selectize Input")
         ),
         fluidRow(
+            class = "m-3",
             # To apply Bootstrap theme, need to add "form-control" class
             tags$select(
                 id = "selectize",
@@ -54,6 +57,7 @@ ui <- fluidPage(
             )
         ),
         fluidRow(
+            class = "m-3",
             actionButton(
                 inputId = "load_options",
                 "Click to load options"
