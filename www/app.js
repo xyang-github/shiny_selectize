@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	
+
 	$("#selectize").selectize({
 		placeholder: "Please select an option",
 		options: [],
@@ -20,7 +20,7 @@ $(document).ready(function() {
 
 			// },
 			item: function(data, escape) {
-				return "<div class = 'tag is-link is-light is-rounded m-1 pt-1'>" + escape(data.text)+ "</div>";
+				return "<div class = 'tag is-link is-light m-1 pt-1 is-medium'>" + escape(data.text)+ "</div>";
 			}
 		}
 	});

@@ -28,7 +28,7 @@ ui <- fluidPage(
                 "
                 .form-control.selectize-control .selectize-input.focus {
                       border-color: #00008B;
-                      box-shadow: 0 0 0 0.1rem #00008B;
+                      box-shadow: 0 0 0 0;
                 }
 
                 .form-control.selectize-control .selectize-dropdown .selectize-dropdown-content .option:hover, .form-control.selectize-control .selectize-dropdown .selectize-dropdown-content .option:focus {
